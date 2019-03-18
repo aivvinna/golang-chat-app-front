@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-import "./App.css";
-import { connect, sendMsg } from "./api";
-import Header from './components/Header/Header';
-import ChatHistory from './components/ChatHistory/ChatHistory';
-import ChatInput from './components/ChatInput/ChatInput';
+import React, { Component } from "react"
+import { connect, sendMsg } from "./api"
+import Header from './components/Header/'
+import ChatHistory from './components/ChatHistory/'
+import ChatInput from './components/ChatInput/'
 
 class App extends Component {
   constructor(props) {
