@@ -1,6 +1,8 @@
-var socket = new WebSocket("ws://localhost:8080/ws");
+const url = process.env.REACT_APP_WEBSOCKET;
 
-let connect = callback => {
+const socket = new WebSocket(url);
+
+const connect = callback => {
   console.log("Attempting Connection...");
 
   socket.onopen = () => {
@@ -21,7 +23,7 @@ let connect = callback => {
   };
 };
 
-let sendMsg = msg => {
+const sendMsg = msg => {
   console.log("sending msg: ", msg);
   socket.send(msg);
 };
